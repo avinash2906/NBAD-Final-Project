@@ -188,7 +188,7 @@ function Visualizations() {
       try {
         const token = localStorage.getItem('token');
         const userData = localStorage.getItem('userData');
-        const endpoint = `http://localhost:4000/get-budgets/${userData}?month=${selectedMonth}`;
+        const endpoint = `https://nbad-pb-backend.onrender.com/get-budgets/${userData}?month=${selectedMonth}`;
         const res = await axios.get(endpoint, {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -225,7 +225,7 @@ function Visualizations() {
       try {
         const token = localStorage.getItem('token');
         const userData = localStorage.getItem('userData');
-        const endpoint = `http://localhost:4000/get-expenses/${userData}?month=${selectedMonth}`;
+        const endpoint = `https://nbad-pb-backend.onrender.com/get-expenses/${userData}?month=${selectedMonth}`;
         const res = await axios.get(endpoint, {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -304,10 +304,10 @@ function Visualizations() {
                 </p>
               </article>
             </section>
-            
+            <h1>Comparison of Budget vs Expenses</h1>
             <section className="chart-container">
               <article className="chart">
-                <h1>Bar Chart - Budget vs Expenses</h1>
+                <h1>Bar Chart</h1>
                 <p>
                   <canvas ref={barChartRef} />
                 </p>
@@ -316,7 +316,7 @@ function Visualizations() {
 
             <section className="chart-container">
               <article className="chart">
-                <h1>Line Chart - Budget vs Expenses</h1>
+                <h1>Line Chart</h1>
                 <p>
                   <canvas ref={lineChartRef} />
                 </p>

@@ -27,7 +27,7 @@ const LoginPage = (props) => {
     e.preventDefault();
 
     axios
-      .post('http://localhost:4000/login', formData)
+      .post('https://nbad-pb-backend.onrender.com/login', formData)
       .then((response) => {
         setSuccessMessage(response.data.message);
         if (response.data.user) {
@@ -40,8 +40,8 @@ const LoginPage = (props) => {
         navigate('/');
       })
       .catch((error) => {
-        setErrorMessage('');
-        setSuccessMessage('Invalid username or password');
+        setSuccessMessage('');
+        setErrorMessage('Invalid username or password');
       });
   };
 

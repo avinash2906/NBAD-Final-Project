@@ -7,11 +7,11 @@ import HomePage from '../HomePage/HomePage';
 test('renders homepage with buttons', () => {
   render(
     <Router>
-      <HomePage />
+      <HomePage/>
     </Router>
   );
 
   // Check if the heading is present
-  const headingElement = screen.getByText(/Please select which action you want to perform/i);
+  const headingElement = screen.getByText(/Stay on track/i);
   expect(headingElement).toBeInTheDocument();
 });

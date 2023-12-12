@@ -36,7 +36,7 @@ function ConfigureBudgets() {
       const token=localStorage.getItem("token")
       try {
        
-        const response = await axios.get(`http://localhost:4000/check-existing-budget/${userData}/${selectedMonth}/${category}`,{
+        const response = await axios.get(`https://nbad-pb-backend.onrender.com/check-existing-budget/${userData}/${selectedMonth}/${category}`,{
           headers:{
             Authorization:`Bearer ${token}`
           }
@@ -77,7 +77,7 @@ function ConfigureBudgets() {
       console.log(token);
       console.log(monthlyBudget);
       await axios.post(
-        "http://localhost:4000/configure-budgets",
+        "https://nbad-pb-backend.onrender.com/configure-budgets",
         {
           userData,
           monthlyBudget: selectedMonth,

@@ -23,7 +23,7 @@ function Menu(){
           {isLoggedIn ? (
             <>
             <li>
-                <Link to="/budget-table">Budget Table</Link>
+                <Link to="/budget-table">Add/View Data</Link>
               </li>
               <li></li>
               <li>

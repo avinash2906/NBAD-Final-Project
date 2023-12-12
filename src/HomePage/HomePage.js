@@ -1,26 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 
 function HomePage() {
   return (
     <main className="center" id="main" aria-label="main">
-      <div>
-        <h2 style={{ fontSize: '20px' }}>Please select which action you want to perform</h2>
-
-        <div style={{ marginBottom: '10px' }}>
-          <Link to="/configure-budgets">
-            <button style={{  backgroundColor: '#4a90e2', color: 'black-grey', padding: '10px 15px', borderRadius: '5px', cursor: 'pointer', fontSize: '16px', margin: '25px' }}>
-              Add New Budgets
-            </button>
-          </Link>
-          <Link to="/add-expense">
-          <button style={{  backgroundColor: '#4a90e2', color: 'black-grey', padding: '10px 15px', borderRadius: '5px', cursor: 'pointer', fontSize: '16px', margin: '25px' }}>
-            Add New Expenses
-            </button>
-          </Link>
-        </div>
-      </div>
       <div className="page-area">
         <article>
           <h1>Stay on track</h1>

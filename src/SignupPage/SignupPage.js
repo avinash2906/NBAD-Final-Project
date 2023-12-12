@@ -24,7 +24,7 @@ function SignupPage() {
     e.preventDefault();
 
     axios
-      .post('http://localhost:4000/Signup', formData)
+      .post('https://nbad-pb-backend.onrender.com/Signup', formData)
       .then((response) => {
         setSuccessMessage(response.data.message);
         setErrorMessage('');
@@ -41,7 +41,7 @@ function SignupPage() {
     <section style={{ textAlign: 'center', padding: '20px', position: 'relative' }}>
       <section style={{ display: 'inline-block', textAlign: 'left', backgroundColor: '#f9f9f9', border: '1px solid #ccc', borderRadius: '10px', padding: '20px', width: '400px' }}>
         <form onSubmit={handleSignup}>
-          <h2 style={{ fontSize: '30px' }}>Signup Here!</h2>
+        <h2 style={{ textAlign: 'center', fontSize: '30px' }}>Sign Up!</h2>
 
           {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
           {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
@@ -57,8 +57,6 @@ function SignupPage() {
             style={{ marginTop: '10px', marginBottom: '20px', marginLeft: '5px', width: '100%', padding: '8px', boxSizing: 'border-box', border: '1px solid #ccc', borderRadius: '5px' }}
             required
           />
-          <br />
-
           <label htmlFor="password" style={{ display: 'block', margin: '10px 0' }}>Password:</label>
           <input
             type="password"
@@ -70,9 +68,7 @@ function SignupPage() {
             style={{ marginBottom: '70px', marginLeft: '5px', width: '100%', padding: '8px', boxSizing: 'border-box', border: '1px solid #ccc', borderRadius: '5px' }}
             required
           />
-          <br />
-
-          <button type="submit" style={{ fontWeight: '600', letterSpacing: '0.05em', fontSize: '20px', backgroundColor: 'blue', color: 'white', padding: '10px 15px', border: 'none', borderRadius: '5px', cursor: 'pointer', width: '100%' }}>
+          <button type="submit" style={{ fontWeight: '600', letterSpacing: '0.05em', fontSize: '20px', backgroundColor: '#3498db', color: 'white', padding: '10px 15px', border: 'none', borderRadius: '5px', cursor: 'pointer', width: '100%' }}>
             Signup
           </button>
         </form>
